@@ -1,0 +1,9 @@
+version: "3.8"
+services:
+  llm:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    command: poetry run python llm/main.py
+    ports:
+      - 8080:8080
