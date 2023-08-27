@@ -1,0 +1,22 @@
+[tool.poetry]
+name = "insightsgpt"
+version = "0.1.0"
+description = ""
+authors = ["Suraj Patil <patilsuraj767@gmail.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.11"
+torch = "^2.0.1"
+torchvision = "^0.15.2"
+torchaudio = "^2.0.2"
+transformers = "^4.32.0"
+flask-restful = "^0.3.10"
+
+
+[tool.poetry.group.dev.dependencies]
+flake8 = "^6.1.0"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
