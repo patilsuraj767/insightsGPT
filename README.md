@@ -34,5 +34,5 @@ make run-llm
 llm service has a `/completions` endpoint where one can pass the context and ask the related question to llm model.  
 
 ```
-curl -X POST -H "Content-Type: application/json" http://127.0.0.1:8080/v1/chat/completions -d '{"context": "Hi, My date of birth is 5th Jan", "question":"When is my birthday?"}' | jq
+curl -X POST -H "Content-Type: application/json" http://127.0.0.1:8080/v1/chat/completions -d '{"context": "Chandrayaan-3 launched at 14 July 2023 and landed to south pole of moon at 23 August 2023.", "question":"When did Chandrayaan-3 landed?"}' | jq
 ```
