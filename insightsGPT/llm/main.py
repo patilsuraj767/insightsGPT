@@ -1,8 +1,7 @@
 from flask import Flask
 from flask_restful import Api
-
-from api.v1.chat import Chat
-from lib.config import LLM_API_PORT
+from insightsGPT.llm.api.chat import Chat
+from insightsGPT.lib.config import LLM_API_PORT
 
 app = Flask(__name__)
 api = Api(app)

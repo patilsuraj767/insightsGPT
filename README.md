@@ -25,11 +25,35 @@ Install the needed dependencies.
 poetry install
 ```
 
+To start cromadb(where all the KCS will be embedded and stored) use the below command. 
+
+```
+podman-compose up
+```
+
 Start llm service using below. 
 ```
 make run-llm 
 ```
+
+Start insightsGPT-backend service using below. 
+```
+make run-backend
+```
+
 ## Usage
+
+There is load_data.py script which loads the KCS article from the docs/kcs directory and store them in the cromaDB. 
+```
+poetry run python load_data.py
+```
+
+Use below make target to trigger test API. 
+
+```
+make api-test
+```
+
 
 llm service has a `/completions` endpoint where one can pass the context and ask the related question to llm model.  
 

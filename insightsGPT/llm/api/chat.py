@@ -1,7 +1,7 @@
 from flask import request
 from flask_restful import Resource
 from transformers import AutoModelForSeq2SeqLM, AutoTokenizer
-from lib.config import LLM_MAX_NEW_TOKEN, LLM_MIN_LENGTH
+from insightsGPT.lib.config import LLM_MAX_NEW_TOKEN, LLM_MIN_LENGTH
 
 model_name = "google/flan-t5-small"
 model = AutoModelForSeq2SeqLM.from_pretrained(model_name)

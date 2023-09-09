@@ -12,6 +12,10 @@ torchvision = "^0.15.2"
 torchaudio = "^2.0.2"
 transformers = "^4.32.0"
 flask-restful = "^0.3.10"
+langchain = "^0.0.278"
+jq = "^1.5.0"
+chromadb = "^0.4.8"
+sentence-transformers = "^2.2.2"
 
 
 [tool.poetry.group.dev.dependencies]
