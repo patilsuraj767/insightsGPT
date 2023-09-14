@@ -4,6 +4,7 @@ from langchain.vectorstores import Chroma
 import chromadb
 from chromadb.config import Settings
 from langchain.embeddings.sentence_transformer import SentenceTransformerEmbeddings
+from insightsGPT.lib.config import CHROMA_DB_HOST, CHROMA_DB_PORT
 
 
 def load_kcs_article(f):
@@ -22,7 +23,7 @@ def main():
         # print(documents)
         # print(len(documents[0].page_content))
         # print("==============================")
-        client = chromadb.HttpClient(settings=Settings())
+        client = chromadb.HttpClient(host=CHROMA_DB_HOST, port=CHROMA_DB_PORT, settings=Settings())
         embedding_function = SentenceTransformerEmbeddings(model_name="all-MiniLM-L6-v2")
         langchain_chroma = Chroma(
             client=client,

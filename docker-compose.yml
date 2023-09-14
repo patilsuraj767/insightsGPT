@@ -1,6 +1,19 @@
 version: "3.8"
 services:
+  llm:
+    image: quay.io/supatil/insightsgpt
+    ports:
+      - 8080:8080
+    command: make run-llm
   chromadb:
     image: quay.io/supatil/chromadb
     ports:
       - 8000:8000
+  backend:
+    image: quay.io/supatil/insightsgpt
+    ports:
+      - 5001:5001
+    command: make run-backend
+    environment:
+      - LLM_HOST=llm
+      - CHROMA_DB_HOST=chromadb
