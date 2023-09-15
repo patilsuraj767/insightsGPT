@@ -7,7 +7,6 @@ Based on [🦜️🔗 LangChain + Next.js Starter Template](https://github.com/l
 First, clone this repo and download it locally.
 
 Next, you'll need to set up environment variables in your repo's `.env.local` file. Copy the `.env.example` file to `.env.local`.
-To start with the basic examples, you'll just need to add your OpenAI API key.
 
 Next, install the required packages using your preferred package manager (e.g. `pnpm`) and run the development server:
 
