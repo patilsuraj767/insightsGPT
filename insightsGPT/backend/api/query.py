@@ -11,7 +11,7 @@ class Query(Resource):
     def post(self):
         db = getDB()
         json_data = request.get_json(force=True)
-        query = json_data['query']
+        query = json_data['prompt']
         context = db.search(
             query=query,
             search_type="mmr",
@@ -24,5 +24,5 @@ class Query(Resource):
         }
 
         res = requests.post(f"http://{LLM_HOST}:{LLM_PORT}/v1/chat/completions", data=json.dumps(payload))
-
-        return {'res': res.text}
+        data = res.json()
+        return data["res"][0]

@@ -16,4 +16,4 @@ llm-api-test:
 
 .PHONY: api-test
 api-test:
-	curl -X POST -H "Content-Type: application/json" http://127.0.0.1:5001/query -d '{"query": "I am unable to sync custom repository. provide detailed steps to resolve it."}' | jq
+	curl -X POST -H "Content-Type: application/json" http://127.0.0.1:5001/query -d '{"prompt": "I am unable to sync custom repository. provide detailed steps to resolve it."}' 

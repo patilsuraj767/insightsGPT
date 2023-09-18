@@ -14,6 +14,7 @@ langchain = "^0.0.278"
 jq = "^1.5.0"
 chromadb = "^0.4.8"
 sentence-transformers = "^2.2.2"
+flask-cors = "^4.0.0"
 
 
 [tool.poetry.group.dev.dependencies]
